@@ -3,7 +3,9 @@
 let a=10;
 let b=5;
 console.log(a&b)    //0
+console.log(b&a)    //0
 console.log(a|b)    //15
+console.log(b|a)    //15 
 console.log(a^b)    //15
 console.log(~a)     //-11
 console.log(~b)     //-6
