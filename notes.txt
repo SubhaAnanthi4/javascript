@@ -1,0 +1,205 @@
+Fullstack Introduction
+
+javascript variables
+ let  - local variable ... within the block
+var   -  globally scoped .....outside the block too
+const
+
+javascript datatypes - primitive
+number 
+boolean  true /  false
+string 
+big int --(long int)  either n at last(123456789098765432345n) or BigInt(1234567890987623459)
+object 
+
+
+
+operators
+arthmetic   --  +,-,*,/,%
+binary
+ternary
+
+shortcircuit operators-- logical and(&&)and or(||)
+
+
+ if(3<1) && (4>6)   ---- do  not check the 2 nd condition since 1 st condition is false
+
+if(3>1) || (3>2)   ------ do  not check the 2 nd condition since 1 st condition is true
+so.............short circuit
+ 
+
+
+
+
+CONDITIONS
+
+if
+if else
+if elseif else
+nested if else
+switch
+
+
+switch -->   strings and characters can also be used as choice  
+switch(choice){ 
+case 1:
+statement
+break;
+case 2:
+statement
+break;
+default:
+statement
+}
+
+
+default is not necessary
+
+
+can a array of values be passed as choice in switch?
+ No
+
+
+
+break is must in switch otherwise all the cases will be executed
+continue will skip the currrent iteration
+break will stop the iterations
+
+break and continue should not be given to if conditions
+
+
+
+LOOPS
+
+for 
+while
+do while
+
+for(initialization; condition; increment/decrement)
+{statements
+}
+
+for(;;)
+    {
+        console.log("hi")
+    }
+
+hi runs infinite times , since no initialization and condition is given
+
+let a=1;
+for(console.log('a'); a<=3;console.log('b'))
+{
+	console.log('c');
+	a++;
+}
+
+
+OUTPUT:
+a 
+c 
+b
+c
+b
+c
+b
+
+initialization executes only once.. then checks condition then statement, then increment decrement then condition and goes on...
+  1. initialization
+  2. condition
+  3. statemnt
+  4. inc/dec
+  2 -> 3 -> 4 -> 2 -> 3 -> 4 ----> until the condition becomes false
+
+
+incase if you give console.log in condition position then initialization and condition part alone will execute and the code will terminate
+
+let b=1;
+for( b=1;b<=10;b++);     --->   (loop executes itself and terminates with the condition)   
+console.log("hi");
+console.log(b);
+
+
+1 time hi and 11 (because d is declared out of block)
+
+for(let b=1;b<=10;b++);    
+console.log("hi");
+console.log(b);
+ 1 time hi and undefined (because b is defined inside the block)
+
+
+for(var b=1;b<=10;b++)   
+console.log("hi");
+console.log(b);
+
+
+10 times hi and 11 (because var globally scoped)
+
+
+WHILE
+
+while(){
+console.log("hi")
+} 
+   ----> do not execute.... error.... while needs a condition.
+
+
+
+
+
+FUNCTIONS     ---------------> with/without return
+           
+Parameterized 
+non  Parameterized 
+
+
+
+
+ARROW FUNCTIONS
+  
+let function name = () => { statements };
+function call();
+
+
+//arrow function    ------> single statement no need of return statement ............  multiple statements needed return statement.
+let apple=() => { 
+    console.log("apple");
+}
+apple();
+
+
+
+
+CALLBACKS
+Passing a function as a parameter to another function.
+  setTimeout run the code after the specified time.             setTimeout(()=> {statement}, time(2000 milli seconds));
+
+
+                     if i  give dog  then cat with settimeout cat prints first but i want dog as first so i pass cat function as                              
+function dog(callback)   //(cat)               parameter to dog function so both prints after 2 seconds
+{
+    setTimeout(()=>{
+    console.log("JACK the dog");
+    callback();              //cat
+    },2000);
+}
+
+
+
+PROMISES 
+To avoid callback statements.
+
+
+
+
+ASYNC AWAIT
+async   ----  work at the same time                  
+basically functions work one by one ... completion of one  -> start the next   -- synchronous
+
+ async func a()
+{
+	await let db=connectionstring
+}
+ await ===> wait till the data is fetched
+
+
+async await inside the promise
