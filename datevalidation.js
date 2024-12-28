@@ -6,7 +6,7 @@ function valid(date){
    console.log(day);
  if(mnth==2 )
  {
-    if(day>=1 && day<=28)
+    if(day>=1 & day<=28)
     {
         console.log("Valid Date");
     }
@@ -40,9 +40,9 @@ function valid(date){
 
  }
 else{
-  if(day>=1 && day<=30)
+  if(day>=1 & day<=30)
   {
-    if(mnth>=1 && mnth<=12)
+    if(mnth>=1 & mnth<=12)
     {
         console.log("Valid Date");
     }
@@ -53,7 +53,7 @@ else{
   }
   else if(day==31)
   {
-    if(mnth==1 || mnth==3 || mnth==5 || mnth==7 || mnth==8|| mnth==10 || mnth ==12)
+    if(mnth==1 | mnth==3 | mnth==5 | mnth==7 | mnth==8 | mnth==10 | mnth ==12)
     {
         console.log("Valid Date");
     }
